@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="620" viewBox="0 0 760 620" role="img" aria-label="Godoy Botinas">
+  <defs>
+    <linearGradient id="leather" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d79543"/>
+      <stop offset="0.45" stop-color="#b86c2c"/>
+      <stop offset="1" stop-color="#7d3e1e"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f3bd6a"/>
+      <stop offset="1" stop-color="#5a2a14"/>
+    </linearGradient>
+    <filter id="drop" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="16" flood-color="#2b1508" flood-opacity="0.45"/>
+    </filter>
+    <pattern id="grain" width="58" height="58" patternUnits="userSpaceOnUse">
+      <path d="M2 20 C18 4 34 36 56 14 M0 44 C22 24 34 62 58 38" fill="none" stroke="#f7c67f" stroke-width="2" opacity="0.14"/>
+      <path d="M20 0 C8 18 38 28 24 58" fill="none" stroke="#5f2a13" stroke-width="1.5" opacity="0.12"/>
+    </pattern>
+  </defs>
+  <g filter="url(#drop)">
+    <path d="M197 106 C224 74 236 70 279 73 L481 73 C524 70 536 74 563 106 L586 135 C615 174 617 200 596 246 L579 283 C614 334 615 371 584 417 L556 458 C528 496 503 510 454 510 H306 C257 510 232 496 204 458 L176 417 C145 371 146 334 181 283 L164 246 C143 200 145 174 174 135 Z" fill="url(#edge)"/>
+    <path d="M217 125 C240 97 252 94 288 97 H472 C508 94 520 97 543 125 L563 151 C588 184 589 203 571 241 L550 288 C583 333 582 360 555 401 L532 436 C507 468 490 478 448 478 H312 C270 478 253 468 228 436 L205 401 C178 360 177 333 210 288 L189 241 C171 203 172 184 197 151 Z" fill="url(#leather)" stroke="#3d1b0c" stroke-width="6"/>
+    <path d="M239 143 C258 123 274 118 305 120 H455 C486 118 502 123 521 143 L543 168 C562 192 563 211 548 242 L528 285 C556 324 557 349 532 382 L511 411 C492 436 473 446 439 446 H321 C287 446 268 436 249 411 L228 382 C203 349 204 324 232 285 L212 242 C197 211 198 192 217 168 Z" fill="none" stroke="#f5b968" stroke-width="4" stroke-dasharray="11 12" opacity="0.85"/>
+    <path d="M166 155 L267 132 L493 132 L594 155 L572 205 L188 205 Z" fill="#fff8ea" stroke="#d8c7ac" stroke-width="4"/>
+    <path d="M197 162 L270 146 L490 146 L563 162 L548 188 L212 188 Z" fill="#fffdf6"/>
+    <text x="380" y="178" text-anchor="middle" fill="#2b160d" font-family="Georgia, serif" font-size="31" font-weight="700">Desde 1956</text>
+    <text x="380" y="276" text-anchor="middle" fill="#2a1309" font-family="Georgia, serif" font-size="44" font-style="italic">Original</text>
+    <circle cx="273" cy="279" r="9" fill="#2b1509"/>
+    <circle cx="487" cy="279" r="9" fill="#2b1509"/>
+    <text x="380" y="356" text-anchor="middle" fill="#201007" font-family="Georgia, serif" font-size="92" font-weight="700">GODOY</text>
+    <text x="380" y="420" text-anchor="middle" fill="#201007" font-family="Georgia, serif" font-size="52" font-weight="700">Botinas</text>
+    <path d="M270 450 C322 472 438 472 490 450" fill="none" stroke="#6a3014" stroke-width="3" opacity="0.45"/>
+    <text x="380" y="491" text-anchor="middle" fill="#2b1509" font-family="Georgia, serif" font-size="31">Seu Melhor Estilo</text>
+    <text x="380" y="535" text-anchor="middle" fill="#2b1509" font-family="Georgia, serif" font-size="30">★</text>
+  </g>
+  <rect x="0" y="0" width="760" height="620" fill="url(#grain)" opacity="0.35"/>
+</svg>

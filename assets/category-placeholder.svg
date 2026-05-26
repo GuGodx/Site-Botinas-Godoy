@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="520" viewBox="0 0 720 520" role="img" aria-label="Imagem padrão de botina">
+  <defs>
+    <linearGradient id="leather" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#241711"/>
+      <stop offset="0.58" stop-color="#7b4a2b"/>
+      <stop offset="1" stop-color="#3a2418"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="520" fill="#f6f0e5" opacity="0.08"/>
+  <path d="M210 78 L360 78 L405 320 C486 335 552 366 604 413 C585 460 539 482 466 482 L176 482 C124 482 83 466 54 434 C81 386 122 352 178 332 Z" fill="url(#leather)"/>
+  <path d="M190 338 C292 377 453 374 559 350" fill="none" stroke="#d7bb7d" stroke-width="12" stroke-linecap="round" opacity="0.58"/>
+  <path d="M248 130 L354 130 M260 184 L365 184 M270 238 L376 238" stroke="#fffaf1" stroke-width="8" stroke-linecap="round" opacity="0.45"/>
+  <path d="M70 438 H650" stroke="#241711" stroke-width="15" stroke-linecap="round" opacity="0.24"/>
+</svg>

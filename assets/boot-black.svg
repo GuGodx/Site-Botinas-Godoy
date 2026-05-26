@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="460" viewBox="0 0 760 460" role="img" aria-label="Botina preta">
+  <defs>
+    <linearGradient id="boot" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3a3933"/>
+      <stop offset="0.55" stop-color="#080806"/>
+      <stop offset="1" stop-color="#1b1b18"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="16" flood-color="#120904" flood-opacity="0.42"/>
+    </filter>
+  </defs>
+  <g filter="url(#shadow)">
+    <path d="M126 115 C126 72 155 52 197 65 L285 93 C326 107 354 130 367 169 L426 337 C487 343 554 360 626 389 C615 428 579 446 518 443 L147 424 C92 421 58 401 45 365 C72 315 102 283 134 269 Z" fill="url(#boot)"/>
+    <path d="M130 111 L240 113 C289 114 326 136 350 179 L404 327 L146 313 C129 250 124 184 130 111 Z" fill="#12120f"/>
+    <path d="M166 88 L171 302 M197 94 L202 306 M228 102 L234 309 M262 115 L267 313" stroke="#4c4b43" stroke-width="10" stroke-linecap="round"/>
+    <path d="M91 360 C204 380 413 385 616 386" fill="none" stroke="#050504" stroke-width="27" stroke-linecap="round"/>
+    <path d="M105 341 C248 363 420 365 562 363" fill="none" stroke="#4d463b" stroke-width="8" stroke-linecap="round"/>
+    <path d="M132 276 C222 311 314 319 405 314" fill="none" stroke="#5d5448" stroke-width="5" stroke-linecap="round" opacity="0.8"/>
+  </g>
+</svg>
