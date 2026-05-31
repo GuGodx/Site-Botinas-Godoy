@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 82" role="img" aria-label="Marca de cavalo Godoy">
+  <path d="M15 54 C28 50 32 36 42 23 C50 13 60 8 71 8 C67 15 67 20 74 26 C84 34 88 44 82 55 C78 64 67 65 57 59 C50 55 45 51 39 51 C32 51 25 58 18 67" fill="none" stroke="#4b1f0c" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M42 23 C48 29 54 31 63 31" fill="none" stroke="#4b1f0c" stroke-width="5" stroke-linecap="round"/>
+  <path d="M67 42 C69 43 71 43 73 42" fill="none" stroke="#4b1f0c" stroke-width="4" stroke-linecap="round"/>
+  <path d="M44 54 C51 62 59 70 70 75" fill="none" stroke="#4b1f0c" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="63" cy="34" r="2.8" fill="#4b1f0c"/>
+</svg>
