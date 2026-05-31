@@ -13,15 +13,18 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="home-page">
+    <div class="top-announcement">70 anos de tradição, qualidade e confiança em cada passo.</div>
+
     <header class="site-header" aria-label="Cabeçalho">
       <a class="brand" href="index.html" aria-label="Botinas Godoy">
         <img class="brand-logo" src="assets/header-logo-enhanced-v2.png" alt="Godoy Botinas" />
       </a>
 
       <nav class="main-nav" id="main-nav" aria-label="Menu principal" data-menu>
-        <a href="historia.html">História</a>
+        <a href="#historia-godoy">História</a>
+        <a href="#botinas-modernas">Fabricação</a>
+        <a href="#atendimento">Contato</a>
         <a href="#categorias">Linhas</a>
-        <a href="#rodape">Contato</a>
       </nav>
     </header>
 
@@ -49,20 +52,11 @@
       <section class="categories-section" id="categorias" aria-label="Linhas de produtos">
         <div class="categories-heading">
           <div>
-            <span class="section-kicker">Linhas de produtos</span>
-          </div>
-
-          <div class="carousel-controls" aria-label="Controles do carrossel">
-            <button class="carousel-button" type="button" data-carousel-prev aria-label="Categoria anterior">
-              <span aria-hidden="true">‹</span>
-            </button>
-            <button class="carousel-button" type="button" data-carousel-next aria-label="Próxima categoria">
-              <span aria-hidden="true">›</span>
-            </button>
+            <span class="section-kicker"><span>Linhas de produtos</span></span>
           </div>
         </div>
 
-        <div class="category-carousel" data-carousel>
+        <div class="category-carousel">
           <article class="category-card">
             <div class="category-image category-service">
               <img class="service-category-icon" src="assets/trator.png" alt="Trator representando a linha de serviço" />
@@ -72,83 +66,87 @@
 
           <article class="category-card">
             <div class="category-image category-security">
-              <img src="assets/category-placeholder.svg" alt="Imagem padrão da linha de segurança" />
+              <img src="assets/category-security.png" alt="Trabalhador com botina na linha de segurança" />
             </div>
             <h3>Linha de Segurança</h3>
           </article>
 
           <article class="category-card">
             <div class="category-image category-walk">
-              <img src="assets/category-placeholder.svg" alt="Imagem padrão da linha de passeio" />
+              <img src="assets/category-walk.png" alt="Cavaleiro em arena representando a linha de passeio" />
             </div>
             <h3>Linha de Passeio</h3>
           </article>
 
           <article class="category-card">
             <div class="category-image category-coturno">
-              <img src="assets/category-placeholder.svg" alt="Imagem padrão da linha de coturno" />
+              <img src="assets/category-coturno.png" alt="Pessoa com coturno em paisagem de montanha" />
             </div>
             <h3>Linha de Coturno</h3>
           </article>
 
           <article class="category-card">
             <div class="category-image category-kids">
-              <img src="assets/category-placeholder.svg" alt="Imagem padrão da linha infantil" />
+              <img src="assets/category-kids.png" alt="Criança correndo com botina infantil" />
             </div>
             <h3>Linha Infantil</h3>
           </article>
 
           <article class="category-card">
             <div class="category-image category-rubber">
-              <img src="assets/category-placeholder.svg" alt="Imagem padrão da linha de bota de borracha" />
+              <img src="assets/category-rubber.png" alt="Pessoa usando bota de borracha em ambiente rural" />
             </div>
             <h3>Linha de Bota de Borracha</h3>
           </article>
         </div>
 
-        <div class="carousel-dots" data-carousel-dots aria-label="Indicadores do carrossel"></div>
       </section>
 
-      <section class="story-section" aria-labelledby="tradicao-title">
-        <div class="section-kicker">Nossa essência</div>
-        <h2 id="tradicao-title">Tradição e Qualidade</h2>
-        <div class="story-copy">
-          <p>
-            A Botinas Godoy iniciou sua história com a fábrica de calçados estabelecida pelo Sr. Gumercindo Godoy, em 1956.
-            Posteriormente a empresa passou a ser dirigida pelos filhos, aprimorando a qualidade e excelência na fabricação
-            de calçados.
-          </p>
-          <p>
-            Hoje em dia, três gerações adiante, a história de sucesso da Botinas Godoy continua sendo semeada, sempre em
-            busca de novas tecnologias e componentes que se ajustem às mais novas tendências de mercado.
-          </p>
-          <p>
-            Atualmente possui diversas linhas de produtos que vão desde botinas, linha de segurança e ocupacional além da
-            linha tradicional e de uso diário, proporcionando conforto, durabilidade e versatilidade, adequando-se ao estilo
-            e o ritmo da sua vida.
-          </p>
-          <p>
-            Em constante crescimento, a Botinas Godoy investe em tecnologia de ponta, maquinário moderno e mão de obra
-            qualificada para poder atender às suas necessidades em todo território nacional.
-          </p>
+      <section class="contact-shortcuts" id="atendimento" aria-labelledby="contact-shortcuts-title">
+        <div class="contact-shortcuts-copy">
+          <span class="section-kicker">Atendimento Godoy</span>
+          <h2 id="contact-shortcuts-title">Fale diretamente com a nossa equipe</h2>
+          <p>Escolha o melhor canal para tirar dúvidas, solicitar informações ou conhecer melhor nossas linhas de botinas.</p>
+        </div>
+
+        <div class="contact-shortcuts-grid">
+          <a
+            class="contact-shortcut-card"
+            href="https://wa.me/553532951813?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Botinas%20Godoy."
+            target="_blank"
+            rel="noopener"
+          >
+            <span class="contact-shortcut-icon contact-shortcut-icon-whatsapp" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false">
+                <path d="M12.04 2C6.59 2 2.15 6.43 2.15 11.88c0 1.74.46 3.45 1.34 4.95L2 22l5.29-1.39a9.86 9.86 0 0 0 4.75 1.21h.01c5.45 0 9.89-4.43 9.89-9.88A9.82 9.82 0 0 0 19.04 4.9 9.83 9.83 0 0 0 12.04 2Zm0 18.12h-.01a8.2 8.2 0 0 1-4.18-1.14l-.3-.18-3.14.82.84-3.06-.2-.31a8.17 8.17 0 0 1-1.25-4.36c0-4.55 3.7-8.25 8.26-8.25a8.2 8.2 0 0 1 5.84 2.42 8.2 8.2 0 0 1 2.42 5.84c-.02 4.52-3.72 8.22-8.28 8.22Zm4.53-6.17c-.25-.12-1.47-.73-1.7-.81-.23-.08-.4-.12-.56.12-.17.25-.65.81-.8.98-.15.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.15-.25-.02-.38.11-.5.12-.11.25-.29.38-.44.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.23.9 2.43 1.03 2.59.12.17 1.77 2.71 4.3 3.8.6.26 1.07.41 1.44.52.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.11-.23-.17-.48-.29Z" />
+              </svg>
+            </span>
+            <span class="contact-shortcut-title">WhatsApp</span>
+            <span class="contact-shortcut-text">(35) 3295-1813</span>
+          </a>
+
+          <a class="contact-shortcut-card" href="mailto:botinasgodoy@gmail.com">
+            <span class="contact-shortcut-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" focusable="false">
+                <path d="M8 14h32v22H8V14Z" />
+                <path d="m9 15 15 13 15-13" />
+              </svg>
+            </span>
+            <span class="contact-shortcut-title">E-mail</span>
+            <span class="contact-shortcut-text">botinasgodoy@gmail.com</span>
+          </a>
         </div>
       </section>
 
       <section class="feature-cards" aria-label="Acessos principais" data-feature-carousel>
         <div class="feature-carousel-viewport">
           <div class="feature-carousel-track" data-feature-track>
-            <a class="feature-card feature-modern" href="catalogo.html" data-feature-slide>
-              <img class="feature-image" src="assets/card-placeholder.svg" alt="" />
-              <span class="feature-tag">A</span>
-              <span class="feature-title">Botinas modernas</span>
-              <span class="feature-text">Conheça o catálogo de produtos e escolha a linha ideal.</span>
+            <a class="feature-card feature-modern" id="botinas-modernas" href="catalogo.html" data-feature-slide data-feature-modern>
+              <img class="feature-image" src="assets/botinas-modernas-card.png" alt="Processo de fabricação das botinas Godoy" />
             </a>
 
-            <a class="feature-card feature-factory" href="historia.html" data-feature-slide>
-              <img class="feature-image" src="assets/card-placeholder.svg" alt="" />
-              <span class="feature-tag">B</span>
-              <span class="feature-title">Fabricação Godoy</span>
-              <span class="feature-text">Veja a história da marca e sua evolução na fabricação.</span>
+            <a class="feature-card feature-factory" id="historia-godoy" href="#historia-godoy" data-feature-slide data-feature-history>
+              <img class="feature-image" src="assets/fabricacao-godoy-card.png" alt="Produção de botinas na fábrica Godoy" />
             </a>
           </div>
         </div>
@@ -166,24 +164,46 @@
     </main>
 
     <footer class="site-footer" id="rodape">
-      <div class="footer-logo" aria-label="Logo padrão Botinas Godoy">
-        <img src="assets/godoy-logo-removebg-preview.png" alt="Godoy Botinas" />
-        <small>Desde 1956</small>
+      <div class="footer-topline" aria-hidden="true"></div>
+
+      <div class="footer-main">
+        <div class="footer-social">
+          <span>Acompanhe:</span>
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram Botinas Godoy">
+            <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+              <rect x="3.5" y="3.5" width="17" height="17" rx="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle cx="17.2" cy="6.8" r="1" />
+            </svg>
+          </a>
+        </div>
+
+        <address class="footer-contact">
+          <span>CNPJ: 09.942.028/0001-12</span>
+          <span>Rua Professor José Vieira, 741</span>
+          <span>Centro, Machado/MG</span>
+          <span>CEP: 37750-000</span>
+          <span>(35) 3295-1813</span>
+          <span>botinasgodoy@gmail.com</span>
+        </address>
+
+        <a class="footer-brand" href="index.html" aria-label="Botinas Godoy">
+          <img src="assets/footer-godoy-logo-fit.png" alt="Godoy Botinas" />
+        </a>
       </div>
 
-      <div class="footer-values-card">
-        <div>
-          <h3>Missão</h3>
-          <p>Produzir calçados resistentes, confortáveis e confiáveis para diferentes rotinas de trabalho e lazer.</p>
-        </div>
-        <div>
-          <h3>Visão</h3>
-          <p>Ser referência nacional em botinas, unindo tradição familiar, inovação e qualidade constante.</p>
-        </div>
-        <div>
-          <h3>Valores</h3>
-          <p>Respeito, honestidade, durabilidade, cuidado artesanal, evolução tecnológica e compromisso com o cliente.</p>
-        </div>
+      <nav class="footer-nav" aria-label="Links do rodapé">
+        <a href="#historia-godoy">Nossa História</a>
+        <a href="#categorias">Linhas de Botinas</a>
+        <a href="#botinas-modernas">Processo de Fabricação</a>
+        <a href="#atendimento">Atendimento</a>
+        <a href="#atendimento">Contato</a>
+        <a href="#rodape">Política de Privacidade</a>
+      </nav>
+
+      <div class="footer-bottom">
+        <span aria-hidden="true"></span>
+        <p>© 2026 Botinas Godoy. Todos os direitos reservados.</p>
       </div>
     </footer>
 

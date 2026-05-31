@@ -1,9 +1,60 @@
-const carousel = document.querySelector("[data-carousel]");
-const prevButton = document.querySelector("[data-carousel-prev]");
-const nextButton = document.querySelector("[data-carousel-next]");
-const dotsContainer = document.querySelector("[data-carousel-dots]");
-
 const heroCarousel = document.querySelector("[data-hero-carousel]");
+const categoriasSection = document.querySelector("#categorias");
+const atendimentoSection = document.querySelector("#atendimento");
+
+const scrollToCategorias = (smooth = true) => {
+  if (!categoriasSection) return;
+
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  categoriasSection.scrollIntoView({
+    behavior: smooth && !prefersReducedMotion ? "smooth" : "auto",
+    block: "center",
+  });
+};
+
+const scrollToAtendimento = (smooth = true) => {
+  if (!atendimentoSection) return;
+
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  atendimentoSection.scrollIntoView({
+    behavior: smooth && !prefersReducedMotion ? "smooth" : "auto",
+    block: "center",
+  });
+};
+
+document.querySelectorAll('a[href="#categorias"]').forEach((link) => {
+  link.addEventListener("click", (event) => {
+    if (!categoriasSection) return;
+
+    event.preventDefault();
+    scrollToCategorias();
+
+    if (window.location.hash !== "#categorias") {
+      window.history.pushState(null, "", "#categorias");
+    }
+  });
+});
+
+document.querySelectorAll('a[href="#atendimento"]').forEach((link) => {
+  link.addEventListener("click", (event) => {
+    if (!atendimentoSection) return;
+
+    event.preventDefault();
+    scrollToAtendimento();
+
+    if (window.location.hash !== "#atendimento") {
+      window.history.pushState(null, "", "#atendimento");
+    }
+  });
+});
+
+if (window.location.hash === "#categorias") {
+  window.setTimeout(() => scrollToCategorias(false), 80);
+}
+
+if (window.location.hash === "#atendimento") {
+  window.setTimeout(() => scrollToAtendimento(false), 80);
+}
 
 if (heroCarousel) {
   const heroTrack = heroCarousel.querySelector("[data-hero-track]");
@@ -65,58 +116,6 @@ if (heroCarousel) {
   startHeroAutoPlay();
 }
 
-if (carousel && prevButton && nextButton && dotsContainer) {
-  const cards = Array.from(carousel.children);
-
-  const getStep = () => {
-    const firstCard = cards[0];
-    if (!firstCard) return carousel.clientWidth;
-    const gap = parseFloat(getComputedStyle(carousel).columnGap) || 0;
-    return firstCard.getBoundingClientRect().width + gap;
-  };
-
-  const getActiveIndex = () => {
-    const step = getStep();
-    return step ? Math.round(carousel.scrollLeft / step) : 0;
-  };
-
-  const updateDots = () => {
-    const activeIndex = getActiveIndex();
-    dotsContainer.querySelectorAll(".carousel-dot").forEach((dot, index) => {
-      dot.classList.toggle("is-active", index === activeIndex);
-    });
-  };
-
-  cards.forEach((_, index) => {
-    const dot = document.createElement("button");
-    dot.className = "carousel-dot";
-    dot.type = "button";
-    dot.setAttribute("aria-label", `Ir para categoria ${index + 1}`);
-    dot.addEventListener("click", () => {
-      carousel.scrollTo({
-        left: getStep() * index,
-        behavior: "smooth",
-      });
-    });
-    dotsContainer.appendChild(dot);
-  });
-
-  prevButton.addEventListener("click", () => {
-    carousel.scrollBy({ left: -getStep(), behavior: "smooth" });
-  });
-
-  nextButton.addEventListener("click", () => {
-    carousel.scrollBy({ left: getStep(), behavior: "smooth" });
-  });
-
-  carousel.addEventListener("scroll", () => {
-    window.requestAnimationFrame(updateDots);
-  });
-
-  window.addEventListener("resize", updateDots);
-  updateDots();
-}
-
 const featureCarousel = document.querySelector("[data-feature-carousel]");
 
 if (featureCarousel) {
@@ -125,6 +124,8 @@ if (featureCarousel) {
   const prevFeatureButton = featureCarousel.querySelector("[data-feature-prev]");
   const nextFeatureButton = featureCarousel.querySelector("[data-feature-next]");
   const featureDotsContainer = featureCarousel.querySelector("[data-feature-dots]");
+  const modernFeatureIndex = slides.findIndex((slide) => slide.matches("[data-feature-modern]"));
+  const historyFeatureIndex = slides.findIndex((slide) => slide.matches("[data-feature-history]"));
   let activeFeatureIndex = 0;
   let autoFeatureTimer;
 
@@ -157,6 +158,29 @@ if (featureCarousel) {
     startFeatureAutoPlay();
   };
 
+  const showFeatureAt = (index, smooth = true) => {
+    if (index < 0) return;
+
+    goToFeatureSlide(index);
+    window.clearInterval(autoFeatureTimer);
+
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    window.setTimeout(() => {
+      featureCarousel.scrollIntoView({
+        behavior: smooth && !prefersReducedMotion ? "smooth" : "auto",
+        block: "center",
+      });
+    }, 40);
+  };
+
+  const showModernFeature = (smooth = true) => {
+    showFeatureAt(modernFeatureIndex, smooth);
+  };
+
+  const showHistoryFeature = (smooth = true) => {
+    showFeatureAt(historyFeatureIndex, smooth);
+  };
+
   slides.forEach((_, index) => {
     const dot = document.createElement("button");
     dot.className = "carousel-dot";
@@ -184,6 +208,32 @@ if (featureCarousel) {
   featureCarousel.addEventListener("focusin", () => window.clearInterval(autoFeatureTimer));
   featureCarousel.addEventListener("focusout", startFeatureAutoPlay);
 
+  document.querySelectorAll('a[href="#historia-godoy"]').forEach((link) => {
+    link.addEventListener("click", (event) => {
+      if (historyFeatureIndex < 0) return;
+
+      event.preventDefault();
+      showHistoryFeature();
+
+      if (window.location.hash !== "#historia-godoy") {
+        window.history.pushState(null, "", "#historia-godoy");
+      }
+    });
+  });
+
+  document.querySelectorAll('a[href="#botinas-modernas"]').forEach((link) => {
+    link.addEventListener("click", (event) => {
+      if (modernFeatureIndex < 0) return;
+
+      event.preventDefault();
+      showModernFeature();
+
+      if (window.location.hash !== "#botinas-modernas") {
+        window.history.pushState(null, "", "#botinas-modernas");
+      }
+    });
+  });
+
   document.addEventListener("visibilitychange", () => {
     if (document.hidden) {
       window.clearInterval(autoFeatureTimer);
@@ -192,6 +242,12 @@ if (featureCarousel) {
     }
   });
 
-  goToFeatureSlide(0);
-  startFeatureAutoPlay();
+  if (window.location.hash === "#historia-godoy") {
+    showHistoryFeature(false);
+  } else if (window.location.hash === "#botinas-modernas") {
+    showModernFeature(false);
+  } else {
+    goToFeatureSlide(0);
+    startFeatureAutoPlay();
+  }
 }
